@@ -1,0 +1,235 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+* {
+    padding: none;
+    margin: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: white;
+    height: 200vh;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "helvetica";
+    src: url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+        url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+        url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#hover-svg {
+    transition: all 0.2s;
+}
+
+#hover-svg:hover {
+    opacity: 0.5;
+}
+
+#nav-bar {
+    z-index: 1;
+    /* this is added so the nav-bar isn't loaded UNDER the canvas-gradient*/
+    display: flex;
+    flex: 1 1;
+    /* flex shrink tells it the size to be at all times*/
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+}
+
+#links {
+    display: flex;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#links li a {
+    padding: 20px;
+    color: white;
+}
+
+#links li:hover {
+    opacity: 0.45;
+}
+
+.sign-in {
+    align-items: center;
+    border: 0;
+    border-radius: 24px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    min-width: 94px;
+    min-height: 33px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .2s;
+    font-weight: 700;
+    background: rgb(255, 255, 255, 0.3);
+}
+
+.sign-in:active,
+.sign-in:hover {
+    outline: 0;
+    background: rgb(255, 255, 255, 0.5);
+}
+
+.sign-in span {
+    transition: 300ms;
+}
+
+.sign-in:hover span {
+    background: none;
+}
+
+.sign-in:active {
+    transform: scale(0.9);
+}
+
+
+#hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 30px;
+    margin-right: 1.5rem;
+    margin-top: 1.6rem;
+}
+
+#glass-circle {
+    background: rgb(255, 255, 255, 0.1);
+    border-radius: 16px;
+    width: 46px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+
+#ham {
+    width: 16px;
+    height: 2px;
+    background: white;
+    margin: 1px;
+    opacity: 1;
+}
+
+#glass-circle:hover {
+    background: rgb(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 900px) {
+    #stripe-logo {
+        margin-left: 1.5rem;
+        margin-top: 1.8rem;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    #nav-bar {
+        min-width: 100vw;
+        justify-content: space-between;
+    }
+
+    #links {
+        display: none;
+    }
+
+    .sign-in {
+        display: none;
+    }
+}
+
+#gradient-canvas {
+    z-index: -1;
+    position: absolute;
+    --gradient-color-1: #6ec3f4;
+    --gradient-color-2: #3a3aff;
+    --gradient-color-3: #ff61ab;
+    --gradient-color-4: #E63946;
+    clip-path: polygon(0 0, 100% 0, 100% 29%, 0 100%);
+}
+
+#parent-header {
+    /* background:white; */
+}
+
+#content-header p {
+    margin-top: 32px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+#content-header {
+    width: 800px;
+    padding-left: 12rem;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #111439	;
+    font-size: 92px;
+    letter-spacing: -2px;
+    line-height:95%;
+    /* mix-blend-mode: color-burn; */
+    /*this is just to make a cool little text-effect*/
+}
+
+.CTA {
+    display: inline;
+}
+
+#start {
+    background: #111439;
+    color: white;
+    font-size: 14px;
+    width: 106px;
+    height: 33px;
+    border-radius: 24px;
+    border: none;
+    transition: all 0.2s;
+}
+
+#start:hover {
+    background: rgb(17, 20, 57, 0.8);
+}
+#start:active{
+    transform: scale(0.9);
+}
+
+#contact-sls {
+    color: #111439;
+    font-size: 14px;
+    margin-left: 1rem;
+    transition: all 0.2s;
+}
+
+#contact-sls:hover {
+    color: rgb(17, 20, 57, 0.8);
+}
+

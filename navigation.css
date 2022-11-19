@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#mobile-nav {
+    width: 398px;
+    height: 890px;
+    background: white;
+    display: none;
+    border-radius: 8px;
+    animation-duration: 0.2s;
+    /* don't forget to set a duration! */
+}
+
+#center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+@media screen and (min-width:280px) and (max-width:600px) {
+    #mobile-nav {
+        width: 94.5%;
+    }
+
+    #center-align {
+        justify-content: center;
+        width: 100%;
+    }
+
+    header {
+        align-items: flex-start;
+        /*this is basically for fixing the stripe logo on this screen size*/
+        height: 0;
+        /* header height is 0 on x > 900px so the text can stop sinking*/
+    }
+
+    #content-header {
+        padding-left: 2rem;
+    }
+
+    h1 {
+        font-size: 40px;
+        max-width: 220px;
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 220px;
+    }
+
+    #content-header a {
+        font-size: 14px;
+    }
+
+    #content-header p {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    #center-align {
+        justify-content: flex-end;
+    }
+
+    header {
+        align-items: flex-start;
+        /*this is basically for fixing the stripe logo on this screen size*/
+        height: 0;
+        /* header height is 0 on x > 900px so the text can stop sinking*/
+    }
+
+    #mobile-nav {
+        width: 398px;
+        margin-right: 1rem;
+    }
+
+    #content-header {
+        padding-left: 3rem;
+        width: 500px;
+    }
+
+    #hamburger {
+        margin-right: 2rem;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+}
+
+@media screen and (min-width: 420px) and (max-width: 600px) {
+    h1 {
+        font-size: 52px;
+        max-width: 350px;
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 350px;
+    }
+
+    #content-header {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #center-align {
+        display: none;
+    }
+
+    #content-header {
+        padding-left: 6rem;
+    }
+
+}
+
+@media screen and (min-width: 900px) and (max-width:1400px) {
+    h1 {
+        font-size: 72px;
+        max-width: 500px;
+    }
+
+    p {
+        max-width: 500px;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    #content-header {
+        padding-left: 14rem;
+    }
+}
+
+
+
+.container-logo-X {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    background: #F6F9FB;
+    padding: 16px 16px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#cross {
+    transform: translateX(8px);
+    display: block;
+}
+#cross:hover{
+    background: rgb(255, 255, 255, 0.8);
+}
+
+#mbl-links li {
+    height: 54px;
+    padding: 16px;
+}
+
+#mbl-links:nth-child(3) {
+    border: 2px dotted;
+}
